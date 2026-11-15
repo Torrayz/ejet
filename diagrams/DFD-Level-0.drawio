@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-15T02:30:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="dfd-level-0" name="DFD Level 0">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="actor" value="<b>PETUGAS / ADMIN</b><br>Entitas eksternal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f9fa;strokeColor=#263238;fontSize=16;" vertex="1" parent="1"><mxGeometry x="80" y="320" width="300" height="150" as="geometry"/></mxCell>
+<mxCell id="process" value="<b>PROSES 0</b><br>SISTEM INFORMASI KOPERASI<br>SIMPAN PINJAM SEJAHTERA MANDIRI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eef2;strokeColor=#263238;fontSize=18;" vertex="1" parent="1"><mxGeometry x="650" y="270" width="420" height="250" as="geometry"/></mxCell>
+<mxCell id="input" value="Input: username/password, data anggota, simpanan, pinjaman, angsuran, permintaan laporan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=13;" edge="1" parent="1" source="actor" target="process"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="output" value="Output: status login, nomor anggota/transaksi, saldo, sisa tagihan, status pinjaman, bukti dan laporan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=13;" edge="1" parent="1" source="process" target="actor"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="note" value="Catatan: Anggota tidak memiliki akun login pada rancangan ini. Data dan instruksi transaksi dicatat petugas/admin." style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#b0bec5;fontSize=13;" vertex="1" parent="1"><mxGeometry x="440" y="650" width="800" height="90" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
