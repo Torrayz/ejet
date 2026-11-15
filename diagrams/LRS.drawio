@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-15T02:30:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="lrs-koperasi" name="LRS Koperasi">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+        <mxCell id="u" value="<b>users</b><br>PK id_user<br>username UNIQUE<br>password_hash<br>nama_lengkap, peran<br>status_aktif, timestamps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f9fa;strokeColor=#263238;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="70" width="300" height="220" as="geometry"/></mxCell>
+<mxCell id="a" value="<b>anggota</b><br>PK id_anggota<br>nomor_anggota UNIQUE<br>nama_lengkap, alamat, no_telepon<br>tanggal_daftar, status_anggota<br>saldo_simpanan<br>FK id_user_input" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f9fa;strokeColor=#263238;fontSize=14;" vertex="1" parent="1"><mxGeometry x="470" y="70" width="360" height="250" as="geometry"/></mxCell>
+<mxCell id="j" value="<b>jenis_simpanan</b><br>PK id_jenis_simpanan<br>kode_jenis UNIQUE<br>nama_jenis, keterangan<br>status_aktif" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f9fa;strokeColor=#263238;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1050" y="80" width="360" height="200" as="geometry"/></mxCell>
+<mxCell id="p" value="<b>pinjaman</b><br>PK id_pinjaman<br>no_pinjaman UNIQUE<br>FK id_anggota<br>FK id_user<br>pokok_pinjaman, bunga_persen<br>tenor_bulan, total_tagihan<br>sisa_tagihan, status_pinjaman" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f9fa;strokeColor=#263238;fontSize=14;" vertex="1" parent="1"><mxGeometry x="40" y="490" width="390" height="280" as="geometry"/></mxCell>
+<mxCell id="s" value="<b>simpanan</b><br>PK id_simpanan<br>no_transaksi UNIQUE<br>FK id_anggota<br>FK id_jenis_simpanan<br>FK id_user<br>tanggal_transaksi, jumlah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f9fa;strokeColor=#263238;fontSize=14;" vertex="1" parent="1"><mxGeometry x="550" y="500" width="390" height="260" as="geometry"/></mxCell>
+<mxCell id="g" value="<b>angsuran</b><br>PK id_angsuran<br>no_transaksi UNIQUE<br>FK id_pinjaman<br>FK id_user<br>tanggal_bayar, jumlah_bayar<br>denda (opsional)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f9fa;strokeColor=#263238;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1060" y="500" width="360" height="250" as="geometry"/></mxCell>
+<mxCell id="e1" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="u" target="a"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e2" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="u" target="p"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e3" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="u" target="s"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e4" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="u" target="g"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e5" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="a" target="p"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e6" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="a" target="s"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e7" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="j" target="s"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e8" value="1 : N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="p" target="g"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
